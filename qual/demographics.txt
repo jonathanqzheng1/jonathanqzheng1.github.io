@@ -1,0 +1,166 @@
+<tab-content title="Demographics">
+                <div class="container card mb-3 card-body" id="bodyDemographics">
+                    <p class="mt0 f2 b">Basic Demographics</p>
+  
+                    <p class="f4">We're collecting basic demographic information for use in our research.</p>
+    
+                    <!-- Gender question -->
+                    <p class="f4 mt4 mb1  mb0 b">
+                        What gender do you identify with?
+                    </p>
+                    
+                    <ul class="f4 list mt0">
+                        <li>
+                            <input type="radio" name="gender" value="male"> Male
+                        </li>
+                        <li>
+                            <input type="radio" name="gender" value="female"> Female
+                        </li>
+                        <li>
+                            <input type="radio" name="gender" value="other"> Other:
+                            <input type="text" name="gender-manual" placeholder="Please specify if other">
+                        </li>
+                    </ul>
+    
+                    <!-- Age question -->
+                    <p class="f4 mt4 mb1 mb0 b">
+                        Which category below includes your age?
+                    </p>
+                    <ul class="f4 list mt0">
+                        <li>
+                            <input type="radio" name="age" value="-17"> 17 or younger
+                        </li>
+                        <li>
+                            <input type="radio" name="age" value="18-20"> 18-20
+                        </li>
+                        <li>
+                            <input type="radio" name="age" value="21-29"> 21-29
+                        </li>
+                        <li>
+                            <input type="radio" name="age" value="30-39"> 30-39
+                        </li>
+                        <li>
+                            <input type="radio" name="age" value="40-49"> 40-49
+                        </li>
+                        <li>
+                            <input type="radio" name="age" value="50-59"> 50-59
+                        </li>
+                        <li>
+                            <input type="radio" name="age" value="60-69"> 60-69
+                        </li>
+                        <li>
+                            <input type="radio" name="age" value="70-"> 70 or older
+                        </li>
+                    </ul>
+    
+                    <!-- Race question -->
+                    <p class="f4 mt4 mb1 mb0 b">
+                        Please select the race(s) which fit you best.
+                    </p>
+                    <ul class="f4 list mt0">
+                        <li>
+                            <input type="radio" name="race" value="white"> White
+                        </li>
+                        <li>
+                            <input type="radio" name="race" value="black"> Black or African-American
+                        </li>
+                        <li>
+                            <input type="radio" name="race" value="native"> Native American or Alaskan Native
+                        </li>
+                        <li>
+                            <input type="radio" name="race" value="asian"> Asian
+                        </li>
+                        <li>
+                            <input type="radio" name="race" value="pacific"> Native Hawaiian or other Pacific
+                            islander
+                        </li>
+                        <li>
+                            <input type="radio" name="race" value="hispanic"> Spanish, Hispanic, or Latino
+                        </li>
+                        <li>
+                            <input type="radio" name="race" value="other"> Some other race (please specify)
+                            <input type="text" name="race-manual" placeholder="Please specify if other">
+                        </li>
+                    </ul>
+    
+                    <!-- Education question -->
+                    <p class="f4 mt4 mb1  mb0 b">
+                        Which option best fits the highest level of school you have completed, or the
+                        highest degree you have received?
+                    </p>
+                    <ul class="f4 list mt0">
+                        <li>
+                            <input type="radio" name="school" value="no-hs"> Less than high school degree
+                        </li>
+                        <li>
+                            <input type="radio" name="school" value="hs"> High school degree or equivalent
+                            (e.g., GED)
+                        </li>
+                        <li>
+                            <input type="radio" name="school" value="some-college"> Some college but no degree
+                        </li>
+                        <li>
+                            <input type="radio" name="school" value="associate"> Associate degree
+                        </li>
+                        <li>
+                            <input type="radio" name="school" value="bachelor"> Bachelor degree
+                        </li>
+                        <li>
+                            <input type="radio" name="school" value="grad"> Graduate degree
+                        </li>
+                    </ul>
+    
+                    <!-- Living in US question -->
+                    <p class="f4 mt4 mb1  mb0 b">
+                        Do you live in the United States?
+                    </p>
+                    <ul class="f4 list mt0">
+                        <li>
+                            <input type="radio" name="us" value="yes"> Yes
+                        </li>
+                        <li>
+                            <input type="radio" name="us" value="no"> No
+                        </li>
+                    </ul>
+    
+                    <!-- Time in US question -->
+                    <p class="f4 mt4 mb1  mb0 b">
+                        How long have you lived in the U.S.? (if not in U.S., please pick "n/a")
+                    </p>
+                    <ul class="f4 list mt0">
+                        <li>
+                            <input type="radio" name="time-in-us" value="-1"> Less than 1 year
+                        </li>
+                        <li>
+                            <input type="radio" name="time-in-us" value="1-2"> between 1 and 2 years
+                        </li>
+                        <li>
+                            <input type="radio" name="time-in-us" value="2-5"> between 2 and 5 years
+                        </li>
+                        <li>
+                            <input type="radio" name="time-in-us" value="5-10"> between 5 and 10 years
+                        </li>
+                        <li>
+                            <input type="radio" name="time-in-us" value="10-"> 10 or more years
+                        </li>
+                        <li>
+                            <input type="radio" name="time-in-us" value="none"> n/a
+                        </li>
+                    </ul>
+    
+                    <!-- Native language question -->
+                    <p class="f4 mt4 mb1  mb0 b">
+                        Is English one of your native languages?
+                    </p>
+                    <ul class="f4 list mt0">
+                        <li>
+                            <input type="radio" name="language" value="yes"> Yes
+                        </li>
+                        <li>
+                            <input type="radio" name="language" value="no"> No
+                        </li>
+                    </ul>
+    
+                </div>
+                <!-- / basic demographics card -->
+              </tab-content>
