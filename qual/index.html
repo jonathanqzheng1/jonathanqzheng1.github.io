@@ -354,17 +354,20 @@
             </tab-content>
 
             <tab-content title="Quiz">
+                
                 <p>
-                    Let's now do a quiz. In the end, click <i>Submit</i> button to submit your annotations.
-                    It is normal that the window after submission doesn't load - don't worry, your answers are still saved.
-                    After submitting, you can head to the next section.
+                    Let's now do a quiz. The quiz will be open in a new tab after you click the link below.
+                    In the end, click <i>Submit</i> button to submit your annotations. 
+                </p>
+                <p>
+                    After submission, you will be redirected to prolific with a completion code.
+                </p>
+                <p>
+                    Come back to this page and resume after your submission.
                 </p>
 
-                <div>
-                    <iframe id="quiz_iframe" 
-                    width="100%" height="900" ></iframe>
-                </div>
-
+                <a target="_blank" id="quiz_iframe">Click to start your quiz!</a> 
+                
             </tab-content>
 
             <!-- <tab-content title="Prolific Test">
@@ -450,7 +453,7 @@
     let quiz_url = "https://thresh.tools/?gh=caiyangcy/idiom-annotation/master/idiom_v3.yml&d=caiyangcy/idiom-annotation/master/quiz_only.json" + 
                 "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
     let quiz_iframe = document.getElementById("quiz_iframe");
-    quiz_iframe.src = quiz_url;
+    quiz_iframe.href = quiz_url;
 </script>
 
 <style>
