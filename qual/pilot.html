@@ -138,7 +138,8 @@
 
 
                 <p> <b><span style="color:#f5070f">[NEW] </span></b> <span style="background-color:#79889c">Unnatural</span> 
-                    - the translation is ok but not perfect enough. In other words, the translation can be improved by more appropriate choices of words.              
+                    - the translation is ok but not perfect enough due to improper choices of words or grammar errors.
+                    In other words, the translation can be improved by more appropriate choices of words.              
                 </p>
 
                 <example-sent  
@@ -162,6 +163,22 @@
                     <template #given-idiom><b>Idiom: 身无长处</b></template>
                     <template #zh-sent>我爸临终时候说，这一生<span style="background-color:#9cd1d5">身无长处</span>，不曾留下什么给我</template>
                     <template #en-sent> My father said when he was dying, 'I have <span style="background-color:#9cd1d5">no merits in this life</span>, I have not left anything for you.' </template>
+                </example-sent>
+
+
+                <p><b><span style="color:#f5070f">[NEW] </span></b><span style="background-color:#b54e22">Addition</span> 
+                    - In addition to the translation of idiom, the translation also contains non-present content in the source.
+                    Addition can be viewed as correct translation + additional irrelevant content.
+                </p>
+
+                <example-sent  
+                    noedits=true
+                    explanation="人强马壮 means stronger, so healither is a non-present content in the idiom. 
+                                By the way, the usage of the idiom in the Chinese sentence here is also not good enough. 
+                                The idiom is used to describe army instead of ordinary people.">
+                    <template #given-idiom><b>Idiom: 人强马壮</b></template>
+                    <template #zh-sent>她笑指，希望泳队出赛可以更加<span style="background-color:#b54e22">人强马壮</span>。</template>
+                    <template #en-sent>She smiles and points out that she hopes the swimming team can be <span style="background-color:#b54e22">stronger and healthier</span> to compete. </template>
                 </example-sent>
 
 
@@ -269,7 +286,33 @@
                     - Other translation errors that cannot be described by categories above. 
                     <b><span style="color:#f5070f">You need to be specific about what the types are - don't be vague!</span></b>
                 </p>
+                
+            </tab-content>
 
+            <tab-content title="[NEW] Binary Questions">
+                <h1><span style="color:#f5070f">[NEW] </span> Binary Questions</h1>
+                <p>
+                    You will also be asked two additional questions with yes or no as an answer.
+                </p>
+
+                <ul>
+                    <li>
+                        <b>Is the idiom used correctly in Chinese text?</b> 
+                        You may find the original Chinese sentence doesn't use the idiom very properly. 
+                        In this case, you should select "No" for this question. 
+                    </li>
+                    <li>
+                        <b>Is the boundary of idiom clearly identified in the translation?</b>
+                        You may also find that the English translation is not able to tell the span of idiom apart from the context.
+                        The translation considers part of the idiom together with its surrounding context.
+                        For instance, we have "_ABCD_", where "_" is the context and "ABCD" is the idiom.
+                        Instead of translatig "ABCD", the English part is translating "_A", "BC" and "D_" separately.
+                    </li>
+                </ul>
+
+            </tab-content>
+
+            <tab-content title="Severity Scores">
 
                 <h1>Severity Scores</h1>
                 <p>
@@ -277,8 +320,9 @@
                     Selection of severity scores should be based on how idiom translation impacts our understanding of the whole sentence.
                     We have three levels of severity scores: <b>1 - minor</b>, <b>2 - somewhat</b>, and <b>3 - a lot</b>.
                 </p>
+            </tab-content>
 
-
+            <tab-content title="[NEW] Confidence Scores">
                 <h1><span style="color:#f5070f">[NEW] </span> Confidence Scores</h1>
                 <p>
                     You will be asked to put down your confidence on your annotation. 
@@ -286,6 +330,8 @@
                 </p>
                 
             </tab-content>
+
+            
 
 
             <tab-content title="Summary">
@@ -311,13 +357,14 @@
 
                 <p>
                     Always look up the meaning of the idiom when you are uncertain! 
-                    To assist you with this, we additionally leave some links to the idiom definition pages.
-                    You can click the link and find the corresponding entry on the idiom. Alternatively, you can also search the idiom yourself online.
+                    To assist you with this, we additionally add some definitions to the idiom on the annotation interface for a reference.
+                    However, you should search the idiom yourself if you want to know more about the idiom.
                 </p>
-                <p>
+                <!-- <p>
                     <b>NOTE: You need to open the links in a new tab or window (ctrl + click on Windows or cmd + click on Mac)</b>, 
                     otherwise you will lose all the annotations when you go backwards - the interface doesn't save the data for you!
-                </p>
+                </p> -->
+
                 
             </tab-content>
 
@@ -325,7 +372,7 @@
 
                 <p>
                     Before we get started, please take some time review the quiz answers below. Make sure you understand the choices. 
-                    For simplicitiy, we have marked all confidence as highest.
+                    For simplicitiy, we have marked all confidence as the highest.
                 </p>
 
                 <p>
