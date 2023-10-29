@@ -396,7 +396,7 @@
 
 
 
-            <tab-content title="Main Study">
+            <!-- <tab-content title="Main Study">
                 
                 <p>
                     Let's now do the actual study. The study will be open in a new tab after you click the link below.
@@ -411,8 +411,21 @@
 
                 <a target="_blank" id="quiz_iframe">Click to start your quiz!</a> 
                 
-            </tab-content>
+            </tab-content> -->
 
+            <tab-content title="Main Study Answer">
+                
+                <p>
+                    Below shows the pilot study you have done and its answers.
+                </p>
+
+                <div>
+                    <iframe src="https://thresh.tools/?gh=caiyangcy/idiom-annotation/master/idiom_v4_no_submit.yml&d=caiyangcy/idiom-annotation/master/pilot_answer.json" 
+                    width="100%" height="900" id="tutorial_iframe"></iframe>
+                </div>
+
+                
+            </tab-content>
 
             <tab-content title="Optional Feedback">
                 <div class="container card mb-3 card-body" id="bodyFeedback">
@@ -463,7 +476,7 @@
     const prolific_id = urlParams.get('PROLIFIC_PID');
     const study_id = urlParams.get('STUDY_ID');
     const session_id = urlParams.get('SESSION_ID');
-    let quiz_url = "https://thresh.tools/?gh=caiyangcy/idiom-annotation/master/idiom_v4_3.yml&d=caiyangcy/idiom-annotation/master/pilot.json" + 
+    let quiz_url = "https://thresh.tools/?gh=caiyangcy/idiom-annotation/master/idiom_v4_no_submit.yml&d=caiyangcy/idiom-annotation/master/pilot.json" + 
                 "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
     let quiz_iframe = document.getElementById("quiz_iframe");
     quiz_iframe.href = quiz_url;
