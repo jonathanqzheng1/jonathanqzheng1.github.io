@@ -46,26 +46,22 @@
             <tab-content title="Introduction">
                 <h1>Introduction</h1>
                 <p>
-                    Welcome to the main study of idiom translation annotation.
+                    Welcome to the neologism translation annotation.
                 </p>
 
                 <p>
-                    You are selected for our main study because you have done great in our previous pilot study. 
-                </p>
-
-                <p>
-                    Before you get started, please take some time review the common mistakes we sent to you in Prolific messages.
+                    You are selected for because of the similarity to the idiom translation annotation study you did. 
                 </p>
 
                 <h2>Overview</h2>
 
                 <ul>
                     <li>
-                        The main study contains a series of similar studies, each series contains several small batches of translation pairs. 
+                        The main study contains batches of translation pairs. 
                         We will release each series one by one. This is the first series of studies.
                     </li>
                     <li>
-                        There are 3 bathces of translation pairs and you need to finish annotating all of them. 
+                        There are 3 batches of translation pairs and you need to finish annotating all of them. 
                         In other words, you need to submit 3 times on 3 different Thresh pages.
                     </li>
                 </ul>
@@ -77,30 +73,12 @@
                         We will closely monitor the overall performance, and you will receive feedback for each series.
                     </li>
                     <li>
-                        In addition to the base payment you will receive on Prolific, you will also receive a bonus payment for each series
-                        if you can maintain your annotation performance above a threshold. 
-                    </li>
-                    <li>
                         Meanwhile, you will also be awarded for being active in communications with us. 
                         For instance, if you have a disagreement with our feedback, feel free to message us on Prolific.
                     </li>
                 </ul>
 
             </tab-content>
-
-            
-            <tab-content title="Annotation Guidelines">
-                <h1>Guidelines from Pilot Study</h1>
-            
-                It is likely that you may want to review previous annotation categories and their examples, or the answers to the previous pilot study.
-                For your convenience, you can access them through the link below.
-
-                <br><br>
-
-                <a target="_blank" href="https://caiyangcy.github.io/qual/pilot.html">Click to view previous pilot study and its answers.</a> 
-
-            </tab-content>
-
 
             <tab-content title="Prolific Information">
                 
@@ -149,7 +127,7 @@
 
             <tab-content title="Main Study Part 2">
 
-                <b>Note: this is part 2 out of 3 for the current series! You need to come back to resume after submission.</b>
+                <b>Note: this is part 2 out of 2 for the current series!</b>
 
                 <br><br>
 
@@ -157,15 +135,6 @@
                 
             </tab-content>
 
-            <tab-content title="Main Study Part 3">
-
-                <b>Note: this is part 3 out of 3 for the current series! Come back is optional after submission.</b>
-
-                <br><br>
-
-                <a target="_blank" id="main_study_p3">Click to start your part 3 annotation!</a> 
-                
-            </tab-content>
 
 
             <tab-content title="Optional Feedback">
@@ -232,14 +201,11 @@
         p1 = "4", p2 = "9", p3 = "14";
     }
 
-    let main_url_1 = "https://thresh.tools/?gh=caiyangcy/idiom-annotation/master/main_study_yml/main_p1.yml&d=caiyangcy/idiom-annotation/master/sub-batches-1/round_0/" + prolific_id +
+    let main_url_1 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface.yml&d=caiyangcy/idiom-annotation/master/sub-batches-1/round_0/" + prolific_id +
                      "/sub_batch_" + p1 + ".json" + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
        
-    let main_url_2 = "https://thresh.tools/?gh=caiyangcy/idiom-annotation/master/main_study_yml/main_p2.yml&d=caiyangcy/idiom-annotation/master/sub-batches-1/round_0/" + prolific_id +
-                     "/sub_batch_" + p2 + ".json" + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
-
-    let main_url_3 = "https://thresh.tools/?gh=caiyangcy/idiom-annotation/master/main_study_yml/main_p3.yml&d=caiyangcy/idiom-annotation/master/sub-batches-1/round_0/" + prolific_id +
-                     "/sub_batch_" + p3 + ".json" + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
+    let main_url_2 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface.yml&&d=caiyangcy/idiom-annotation/master/sub-batches-1/round_0/" + prolific_id +
+                     "/sub_batch_" + p2 + ".json" + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id
 
     
     let main_study_p1 = document.getElementById("main_study_p1");
@@ -247,9 +213,6 @@
 
     let main_study_p2 = document.getElementById("main_study_p2");
     main_study_p2.href = main_url_2;
-
-    let main_study_p3 = document.getElementById("main_study_p3");
-    main_study_p3.href = main_url_3;
 
 </script>
 
