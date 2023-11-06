@@ -179,22 +179,22 @@
     var p1 = "", p2 = "", p3 = "";
     
     if (prolific_id == '615d051e2366aeb051acb734'){
-        p1 = "0", p2 = "5", p3 = "10";
+        p1 = "1", p2 = "5", p3 = "10";
     }else if (prolific_id == '651b29ff3a6cadf518640abe'){
-        p1 = "1", p2 = "6", p3 = "11";
+        p1 = "2", p2 = "6", p3 = "11";
     }else if (prolific_id == '5d8cb1c93a7d5c00196eae92'){
-        p1 = "2", p2 = "7", p3 = "12";
+        p1 = "3", p2 = "7", p3 = "12";
     }else if (prolific_id == '5d384c97285d1400199a2886'){
-        p1 = "3", p2 = "8", p3 = "13";
+        p1 = "4", p2 = "8", p3 = "13";
     }else if (prolific_id == '5faefcc22be93b11829e84df'){
         p1 = "4", p2 = "9", p3 = "14";
     }
 
-    let main_url_1 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface.yml&d=caiyangcy/idiom-annotation/master/sub-batches-1/round_0/" + prolific_id +
-                     "/sub_batch_" + p1 + ".json" + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
+    let main_url_1 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface.yml&d=JonathanQZheng/MTTranslationAnnotation/master/Batches/" + prolific_id +
+                     "/batch_" + p1 + ".json" + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
        
-    let main_url_2 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface.yml&&d=caiyangcy/idiom-annotation/master/sub-batches-1/round_0/" + prolific_id +
-                     "/sub_batch_" + p2 + ".json" + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id
+    let main_url_2 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface.yml&&d=JonathanQZheng/MTTranslationAnnotation/master/Batches/" + prolific_id +
+                     "/batch_" + p2 + ".json" + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
 
     
     let main_study_p1 = document.getElementById("main_study_p1");
@@ -245,13 +245,13 @@
     import { getFirestore, collection, addDoc, doc, setDoc, updateDoc, arrayUnion, getDoc } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js";
 
     const firebaseConfig = {
-        apiKey: "AIzaSyDypURj3AXUFVjlxtyu0w0u-RSGWRZCv-U",
-        authDomain: "idiom-403314.firebaseapp.com",
-        projectId: "idiom-403314",
-        storageBucket: "idiom-403314.appspot.com",
-        messagingSenderId: "373788045145",
-        appId: "1:373788045145:web:3f76689c6ef3a636dba648",
-        measurementId: "G-ELNHFK5CZ2"
+          apiKey: "AIzaSyAj1teyQbe0ZA75eZI4aFN8dlMXVFig90U",
+          authDomain: "mt-translation-f3caa.firebaseapp.com",
+          projectId: "mt-translation-f3caa",
+          storageBucket: "mt-translation-f3caa.appspot.com",
+          messagingSenderId: "1057495167441",
+          appId: "1:1057495167441:web:4be1d27db29b9a631670f0",
+          measurementId: "G-J4MKPJD5BK"
     };
   
     // Initialize Firebase
