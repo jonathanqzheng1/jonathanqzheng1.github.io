@@ -57,8 +57,8 @@
 
                 <ul>
                     <li>
-                        The main study contains batches of translation pairs. 
-                        We will release each series one by one. This is the first series of studies.
+                        A neologism is a new word, word form, or phrase that has come into usage recently. The main study contains batches of translations of sentences that contain neologisms and similar sentences without neologisms. 
+                        We will release each series one by one. This is the first series of studies. For sentences with neologisms, the definition will be provided.
                     </li>
                     <li>
                         There are 4 batches of translation pairs and you need to finish annotating all of them. 
@@ -69,6 +69,71 @@
 
             </tab-content>
 
+            <tab-content title="Translation Annotation">
+                <h1>Translation Categories</h1>
+                <p>
+                    <b><span style="color:#f5070f">Please read the annotation categories below carefully since they are slightly different from idiom translation. Translation of neologisms sentences means evaluating the quality of the overall sentence, not just the neologism itself.</span></b>
+                </p>
+
+                <p><span style="background-color:#c8e5c4">Fluent</span> 
+                    - Translation is of good quality. The translation correctly conveys the underlying meaning of the sentence. This means that English phrases are translated correctly into Chinese, and the neologism’s meaning makes sense in Mandarin.  
+                </p>
+
+                <p><span style="background-color:#eba4a2">Incomprehensible</span> 
+                    - The entire translated is completely incoherent. While mistranslations may affect the understanding of the sentence, this category details a complete failure to capture any meaning of the original sentence.                      
+                </p>
+                
+                <p><span style="background-color:#663300">Mistranslation</span> 
+                    - Translation of sentence is incorrect which leads to poor understanding of the overall meaning of the sentence. Neologism translation is incorrect due to wrong choices of words, which affects the understanding of the sentence.
+                    Based on the this, we have the following subcategories:
+                    <ul>
+                        <li>
+                            <b>Neologism:</b>
+                            Neologism is mistranslated.
+                        </li>
+                        <li>
+                            <b>Remaining Sequence:</b>
+                            The part of the sentence that is not the neologism is mistranslated. 
+                        </li>
+                    </ul>
+                </p>
+                
+                <p> <span style="background-color:#808080">Unnatural</span> 
+                    - The translation of the sequence is imperfect as there are grammatical errors in the sequence. However, the overall meaning of the sentence is understood.
+                </p>
+
+                <p><span style="background-color:#cc00cc">Literal Translation</span> 
+                    - For neologisms that use slang and existing words, the translation is literal and not coherent with meaning in Chinese. The correct translation conveys the meaning of the neologism, which is not captured with the literal translation.
+                </p>
+
+                <p><span style="background-color:#ff6600">Partial Translation</span> 
+                    - Sentence is partially translated. The remaining sequence is left out and the sentence ends abruptly without conveying all information.
+                </p>
+
+
+                <p><span style="background-color:#0066ff">No Translation</span> 
+                    - - There is an unstranslated sequence that is left as English in the Chinese sentence.
+                    <b>Note: for the two words SPAC and DBT, they can be left as English.</b>
+                    Based on the this, we have the following subcategories:
+
+                    <ul>
+                        <li>
+                            <b>Neologism:</b>
+                            Neologism is left out in English.
+                        </li>
+                        <li>
+                            <b>Remaining Sequence:</b>
+                            The part of the sentence that is not the neologism is left out as English. 
+                        </li>
+                    </ul>
+                </p>                
+
+                <p> <span style="background-color:#ebd256">More than one error category</span> 
+                    - Presence of more than one error types. <b><span style="color:#f5070f">You need to write down what error types there are!</span></b>
+                </p>
+
+            </tab-content>
+            
             <tab-content title="Prolific Information">
                 
                 <div class="container card mb-3 card-body" id="bodyDemographics">
@@ -95,7 +160,6 @@
 
                 </div>
             </tab-content>
-
 
             <tab-content title="Main Study Part 1">
                 
