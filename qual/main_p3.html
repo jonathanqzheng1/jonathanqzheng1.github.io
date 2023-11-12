@@ -53,22 +53,15 @@
                     You are selected for our main study because you have done great in our previous pilot study. 
                 </p>
 
-                <p>
-                    Before you get started, please take some time review the common mistakes we sent to you in Prolific messages.
-                </p>
-
                 <h2>Overview</h2>
 
                 <ul>
                     <li>
-                        The main study contains a series of similar studies, each series contains several small batches of translation pairs. 
-                        We will release each series one by one. This is the first series of studies.
+                        The main study contains a batches of similar studies. 
                     </li>
                     <li>
-                        For this series, there are 3 studies on Profilic for you to finish. 
-                        They are named as <b>Series 1 Part X</b>, <b>Series 1 Part Y</b> and <b>Series 1 Part Z</b>,
-                        where <b>X</b>, <b>Y</b> and <b>Z</b> may not be consistent numbers.
-                        In other words, you need to submit 3 times on 3 different Thresh pages.
+                        There are a total of 4 studies on Profilic for you to finish. 
+                        In other words, you need to submit 4 times on 4 different Thresh pages.
                     </li>
                 </ul>
 
@@ -76,11 +69,7 @@
 
                 <ul>
                     <li>
-                        We will closely monitor the overall performance after each series, and you will receive feedback for each series.
-                    </li>
-                    <li>
-                        In addition to the base payment you receive on Prolific, you will also receive a bonus payment for each series
-                        if you can maintain your annotation performance above a threshold (60% accuracy). 
+                        We will closely monitor the overall performance after each batch.
                     </li>
                     <li>
                         Meanwhile, you will also be awarded for being active in communications with us. 
@@ -89,20 +78,6 @@
                 </ul>
 
             </tab-content>
-
-            
-            <tab-content title="Main Study Guidelines">
-                <h1>Annotation Guidelines</h1>
-            
-                It is likely that you may want to review previous annotation guidelines and their examples, or the answers to the previous pilot study.
-                For your convenience, you can access them through the link below. See <i>Section 9 Main Study Answer</i> for answers.
-
-                <br><br>
-
-                <a target="_blank" href="https://caiyangcy.github.io/qual/pilot.html">Click to view previous pilot study and its answers.</a> 
-
-            </tab-content>
-
 
             <tab-content title="Prolific Information">
                 
@@ -178,17 +153,29 @@
     const study_id = urlParams.get('STUDY_ID');
     const session_id = urlParams.get('SESSION_ID');
 
-    let sub_batch_idx = "4";
 
-    let assignment = "5faefcc22be93b11829e84df-615d051e2366aeb051acb734-651b29ff3a6cadf518640abe";
 
-    let main_url = "https://thresh.tools/?gh=caiyangcy/idiom-annotation/master/main_study_yml/main_p3.yml&d=caiyangcy/idiom-annotation/master/sub-batches-1/round_0/" + assignment +
-                     "/sub_batch_" + sub_batch_idx + ".json" + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
-       
+    var p1 = "", p2 = "", p3 = "";
+    
+    if (prolific_id == '615d051e2366aeb051acb734'){
+        p1 = "bingtranslate_batch_0.json", p2 = "googletranslate_batch_0.json", p3 = "deepltranslate_batch_0.json";
+    }else if (prolific_id == '651b29ff3a6cadf518640abe'){
+        p1 = "bingtranslate_batch_1.json", p2 = "googletranslate_batch_1.json", p3 = "deepltranslate_batch_1.json";
+    }else if (prolific_id == '5d8cb1c93a7d5c00196eae92'){
+        p1 = "bingtranslate_batch_2.json", p2 = "googletranslate_batch_2.json", p3 = "deepltranslate_batch_2.json";
+    }else if (prolific_id == '5d384c97285d1400199a2886'){
+        p1 = "bingtranslate_batch_3.json", p2 = "googletranslate_batch_3.json", p3 = "deepltranslate_batch_3.json";
+    }else if (prolific_id == '5faefcc22be93b11829e84df'){
+        p1 = "bingtranslate_batch_4.json", p2 = "googletranslate_batch_4.json", p3 = "deepltranslate_batch_4.json";
+    }else{
+        p1 = "bingtranslate_batch_0.json", p2 = "googletranslate_batch_0.json", p3 = "deepltranslate_batch_0.json";
+    }
+
+    let main_url_3 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface_1.yml&d=JonathanQZheng/MTTranslationAnnotation/master/Batches/" + prolific_id +
+                     "/" + p3 + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
 
     let main_study = document.getElementById("main_study");
-    main_study.href = main_url;
-
+    main_study.href = main_url_3;
 
 </script>
 
