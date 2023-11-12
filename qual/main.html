@@ -171,7 +171,7 @@
                     After submission, you will be redirected to prolific with a completion code.
                 </p>
                 <p>
-                    <b>Note: this is part 1 out of 5 for the current series! You need to come back to resume after submission.</b>
+                    <b>Note: this is part 1 out of 4 for the current series! You need to come back to resume after submission.</b>
                 </p>
 
                 <a target="_blank" id="main_study_p1">Click to start your part 1 annotation!</a> 
@@ -180,7 +180,7 @@
 
             <tab-content title="Main Study Part 2">
 
-                <b>Note: this is part 2 out of 5 for the current series!</b>
+                <b>Note: this is part 2 out of 4 for the current series!</b>
 
                 <br><br>
 
@@ -190,7 +190,7 @@
 
             <tab-content title="Main Study Part 3">
 
-                <b>Note: this is part 3 out of 5 for the current series!</b>
+                <b>Note: this is part 3 out of 4 for the current series!</b>
 
                 <br><br>
 
@@ -201,22 +201,11 @@
 
             <tab-content title="Main Study Part 4">
 
-                <b>Note: this is part 4 out of 5 for the current series!</b>
+                <b>Note: this is part 4 out of 4 for the current series!</b>
 
                 <br><br>
 
                 <a target="_blank" id="main_study_p5">Click to start your part 4 annotation!</a> 
-                
-            </tab-content>
-
-
-            <tab-content title="Main Study Part 5">
-
-                <b>Note: this is part 5 out of 5 for the current series!</b>
-
-                <br><br>
-
-                <a target="_blank" id="main_study_p5">Click to start your part 5 annotation!</a> 
                 
             </tab-content>
 
@@ -265,6 +254,7 @@
 </script>
 
 <script>
+<script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const prolific_id = urlParams.get('PROLIFIC_PID');
@@ -273,15 +263,28 @@
 
     var p1 = "", p2 = "", p3 = "";
     
-    let main_url_1 = "https://jonathanqzheng1.github.io/qual/main_p1.html&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
+    if (prolific_id == '615d051e2366aeb051acb734'){
+        p1 = "bingtranslate_batch_0.json", p2 = "googletranslate_batch_0.json", p3 = "deepltranslate_batch_0.json";
+    }else if (prolific_id == '651b29ff3a6cadf518640abe'){
+        p1 = "bingtranslate_batch_1.json", p2 = "googletranslate_batch_1.json", p3 = "deepltranslate_batch_1.json";
+    }else if (prolific_id == '5d8cb1c93a7d5c00196eae92'){
+        p1 = "bingtranslate_batch_2.json", p2 = "googletranslate_batch_2.json", p3 = "deepltranslate_batch_2.json";
+    }else if (prolific_id == '5d384c97285d1400199a2886'){
+        p1 = "bingtranslate_batch_3.json", p2 = "googletranslate_batch_3.json", p3 = "deepltranslate_batch_3.json";
+    }else if (prolific_id == '5faefcc22be93b11829e84df'){
+        p1 = "bingtranslate_batch_4.json", p2 = "googletranslate_batch_4.json", p3 = "deepltranslate_batch_4.json";
+    }else{
+        p1 = "bingtranslate_batch_0.json", p2 = "googletranslate_batch_0.json", p3 = "deepltranslate_batch_0.json";
+    }
+
+    let main_url_1 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface_1.yml&d=JonathanQZheng/MTTranslationAnnotation/master/Batches/" + prolific_id +
+                     "/" + p1 + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
        
-    let main_url_2 = "https://jonathanqzheng1.github.io/qual/main_p2.html&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
+    let main_url_2 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface_2.yml&d=JonathanQZheng/MTTranslationAnnotation/master/Batches/" + prolific_id +
+                     "/" + p2 + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
 
-    let main_url_3 = "https://jonathanqzheng1.github.io/qual/main_p3.html&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
-
-    let main_url_4 = "https://jonathanqzheng1.github.io/qual/main_p4.html&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
-
-    let main_url_5 = "https://jonathanqzheng1.github.io/qual/main_p5.html&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
+    let main_url_3 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface_3.yml&d=JonathanQZheng/MTTranslationAnnotation/master/Batches/" + prolific_id +
+                     "/" + p3 + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
 
     
     let main_study_p1 = document.getElementById("main_study_p1");
@@ -290,14 +293,10 @@
     let main_study_p2 = document.getElementById("main_study_p2");
     main_study_p2.href = main_url_2;
 
-    let main_study_p3 = document.getElementById("main_study_p3");
+    let main_study_p3 = document.getElementById("main_study_p1");
     main_study_p3.href = main_url_3;
-    
-    let main_study_p2 = document.getElementById("main_study_p4");
-    main_study_p4.href = main_url_4;
-    
-    let main_study_p2 = document.getElementById("main_study_p5");
-    main_study_p5.href = main_url_5;
+
+</script>
 
 </script>
 
