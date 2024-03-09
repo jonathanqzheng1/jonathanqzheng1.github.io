@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Neologism Translation Annotation Tutorial</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/vue-form-wizard/dist/vue-form-wizard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="https://kit.fontawesome.com/c3b36ffc0c.js" crossorigin="anonymous"></script>
+
+    <script src="../js/leader-line.min.js"></script>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/vue-form-wizard/dist/vue-form-wizard.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/selection.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/select_box.css">
+    <link rel="stylesheet" href="../css/qual.css">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+
+<!-- https://github.com/BinarCode/vue-form-wizard/issues/27 -->
+
+<body class="sans-serif">
+    <div id="app">
+        <form-wizard 
+            :hide-buttons="true" 
+            @on-complete="onComplete" 
+            @on-change="onChange" 
+            next-button-text="Next" 
+            back-button-text="Back" 
+            finish-button-text="Finish"
+            title="Idiom Translation Annotation Main Study Series 1 Part 12"
+            ref="wizard"
+            subtitle="">
+            
+            <tab-content title="Introduction">
+                <h2>Introduction</h2>
+                <p>
+                    Welcome to the main study of idiom translation annotation.
+                </p>
+
+                <p>
+                    You are selected for our main study because you have done great in our previous pilot study. 
+                </p>
+
+                <p>
+                    Before you get started, please take some time review the common mistakes we sent to you in Prolific messages.
+                </p>
+
+                <h2>Overview</h2>
+
+                <ul>
+                    <li>
+                        The main study contains a batches of similar studies. 
+                    </li>
+                    <li>
+                        There are a total of 13 studies on Profilic for you to finish. 
+                    </li>
+                    <li>
+                        NOTE: These will be different sentences. Please feel free to ask questions about the meaning of these sentences.
+                    </li>
+                </ul>
+
+                <h2>Payment</h2>
+
+                <ul>
+                    <li>
+                        We will closely monitor the overall performance after each batch.
+                    </li>
+                    <li>
+                        Meanwhile, you will also be awarded for being active in communications with us. 
+                        For instance, if you have a disagreement with our feedback, feel free to message us on Prolific.
+                    </li>
+                </ul>
+
+            </tab-content>
+
+            <tab-content title="Prolific Information">
+                
+                <div class="container card mb-3 card-body" id="bodyDemographics">
+                    <p class="mt0 f2 b">Prolific Information</p>
+  
+                    <p class="f4">
+                        This page auto-fills your Prolific information, 
+                        including Prolific ID, Study ID and Session ID.
+                    </p>
+                    
+                    <ul >
+                        <li style="margin: 10px 0">
+                            Prolific ID:  <input id='pro-id-input' type="text" name="prolific-id" size="30" readonly>
+                        </li>
+                        <li style="margin: 10px 0">
+                            Study ID:  <input id='sty-id-input' type="text" name="study-id" size="30" readonly>
+                        </li>
+                        <li style="margin: 10px 0">
+                            Session ID:  <input id='ses-id-input' type="text" name="sessionn-id" size="30" readonly>
+                        </li>
+                        
+                    </ul>
+
+
+                </div>
+            </tab-content>
+
+
+            <tab-content title="Main Study">
+                
+                <p>
+                    Let's now do the actual study. The study will be open in a new tab after you click the link below.
+                    In the end, click <i>Submit</i> button to submit your annotations. 
+                </p>
+                <p>
+                    After submission, you will be redirected to prolific with a completion code.
+                </p>
+                <p>
+                    <b>Note: this is only one part for the current series!</b>
+                </p>
+
+                <a target="_blank" id="main_study">Click to start your annotation!</a> 
+                
+            </tab-content>
+
+
+        </form-wizard>
+    </div>
+
+</body>
+<script src="../js/qual.js"></script>
+
+
+<script>
+    function myFunction() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const prolific_id = urlParams.get('PROLIFIC_PID');
+        const study_id = urlParams.get('STUDY_ID');
+        const session_id = urlParams.get('SESSION_ID');
+        document.getElementById("pro-id-input").value = prolific_id;
+        document.getElementById("sty-id-input").value = study_id;
+        document.getElementById("ses-id-input").value = session_id;
+    };
+    window.onload = myFunction;
+</script>
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const prolific_id = urlParams.get('PROLIFIC_PID');
+    const study_id = urlParams.get('STUDY_ID');
+    const session_id = urlParams.get('SESSION_ID');
+
+
+
+    var p1 = "", p2 = "", p3 = "", p4="", p5="", p6="";
+    
+    if (prolific_id == '615d051e2366aeb051acb734'){
+        p1 = "bingtranslate_batch_0.json", p2 = "googletranslate_batch_0.json", p3 = "deepltranslate_batch_0.json", p4 = "m2m_batch_0.json", p5 ="almar_7b_substitute_batch_0.json";
+    }else if (prolific_id == '651b29ff3a6cadf518640abe'){
+        p1 = "bingtranslate_batch_1.json", p2 = "googletranslate_batch_1.json", p3 = "deepltranslate_batch_1.json", p4 = "m2m_batch_1.json", p5 ="almar_7b_substitute_batch_1.json";
+    }else if (prolific_id == '5d8cb1c93a7d5c00196eae92'){
+        p1 = "bingtranslate_batch_2.json", p2 = "googletranslate_batch_2.json", p3 = "deepltranslate_batch_2.json", p4 = "m2m_batch_2.json", p5 ="almar_7b_substitute_batch_2.json";
+    }else if (prolific_id == '5d384c97285d1400199a2886'){
+        p1 = "bingtranslate_batch_3.json", p2 = "googletranslate_batch_3.json", p3 = "deepltranslate_batch_3.json", p4 = "m2m_batch_3.json", p5 ="almar_7b_substitute_batch_3.json";
+    }else if (prolific_id == '5faefcc22be93b11829e84df'){
+        p1 = "bingtranslate_batch_4.json", p2 = "googletranslate_batch_4.json", p3 = "deepltranslate_batch_4.json", p4 = "m2m_batch_4.json", p5 ="almar_7b_substitute_batch_4.json";
+    }else{
+        p1 = "bingtranslate_batch_0.json", p2 = "googletranslate_batch_0.json", p3 = "deepltranslate_batch_0.json", p4 = "m2m_batch_0.json", p5 ="almar_7b_substitute_batch_0.json";
+    }
+
+    let main_url_5 = "https://thresh.tools/?gh=JonathanQZheng/MTTranslationAnnotation/main/interface_12.yml&d=JonathanQZheng/MTTranslationAnnotation/master/Batches/" + prolific_id +
+                     "/" + p5 + "&PROLIFIC_PID=" + prolific_id + "&STUDY_ID=" + study_id + "&SESSION_ID=" + session_id;
+
+    let main_study = document.getElementById("main_study");
+    main_study.href = main_url_5;
+
+
+</script>
+
+<style>
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    
+    .button3 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #d65745;
+      border-radius: 12px
+    }
+    
+    .button3:hover {
+      background-color: #d65745;
+      color: white;
+      border-radius: 12px
+    }
+
+</style>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+    import { getDatabase, ref, set, push, child } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+    import { getFirestore, collection, addDoc, doc, setDoc, updateDoc, arrayUnion, getDoc } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAj1teyQbe0ZA75eZI4aFN8dlMXVFig90U",
+          authDomain: "mt-translation-f3caa.firebaseapp.com",
+          projectId: "mt-translation-f3caa",
+          storageBucket: "mt-translation-f3caa.appspot.com",
+          messagingSenderId: "1057495167441",
+          appId: "1:1057495167441:web:4be1d27db29b9a631670f0",
+          measurementId: "G-J4MKPJD5BK"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const could_firestore = getFirestore(app);
+    const realtime_db = getDatabase(app);
+
+
+    firestore_submit_single.addEventListener("click", (e) => {
+
+        const prolific_id = document.getElementById("pro-id-input").value
+        
+        setDoc(doc(could_firestore, "Users", prolific_id), {
+            prolific_id: prolific_id,
+            study_id: document.getElementById("sty-id-input").value,
+            session_id: document.getElementById("ses-id-input").value,
+            feedback: document.getElementById("feedback").value,
+        }).then(() => {
+            alert("The data annotation has been submitted. Now you can close the window. Thank you for your participation!");
+        })
+        .catch((error) => {
+            alert("Error occurred");
+        });
+
+    });
+
+</script>
+
+</html>
